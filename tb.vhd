@@ -1,10 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity testbbb is
-end testbbb;
+entity tb is
+end tb;
 
-architecture Behavioral of testbbb is
+architecture Behavioral of tb is
     
     constant T  : time := 10 ns;
     
@@ -14,7 +14,7 @@ architecture Behavioral of testbbb is
     signal hash : std_logic_vector(255 downto 0);
     
 begin
-    sha : entity work.SHA_256(Behavioral)
+    SHA_DUT : entity work.SHA_256(Behavioral)
         port map(
             clk  => clk, 
             rst  => rst, 
@@ -52,5 +52,4 @@ begin
         msg <= X"636263";
         wait for 3 us;
     end process;
-    
 end Behavioral;
