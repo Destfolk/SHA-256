@@ -15,9 +15,9 @@ package Function_pkg is
     function Sigma0 ( A : std_logic_vector(31 downto 0))       return std_logic_vector;
     function Sigma1 ( A : std_logic_vector(31 downto 0))       return std_logic_vector;
     
-    type Array_32x64 is array (0 to 63) of std_logic_vector(31 downto 0);
-    type Array_32x16  is array (0 to  15) of std_logic_vector(31 downto 0);
-    type Array_32x8  is array (0 to  7) of std_logic_vector(31 downto 0);
+    type Array_32x8   is array (0 to  7) of std_logic_vector(31 downto 0);
+    type Array_32x16  is array (0 to 15) of std_logic_vector(31 downto 0);
+    type Array_32x64  is array (0 to 63) of std_logic_vector(31 downto 0);
 
 end Function_pkg;
 
